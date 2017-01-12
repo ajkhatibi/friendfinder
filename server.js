@@ -3,7 +3,7 @@ var bodyparser = require('body-parser');
 var path = require('path');
 
 var app = express();
-var PORT = 3000;
+var PORT = process.env.PORT || 8080;
 
 
 
@@ -21,6 +21,6 @@ require('./api-routes.js')(app)
 
 
 //running server
-app.listen(3000, function () {
+app.listen(8080, function () {
   console.log('YODAWG')
 })
